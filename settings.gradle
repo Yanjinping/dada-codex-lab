@@ -1,8 +1,34 @@
+// === Gradle settings.gradle ===
+// 注意：pluginManagement 必须在最前
+
 pluginManagement {
     repositories {
+        // 插件仓库镜像（放前面优先）
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         gradlePluginPortal()
         mavenCentral()
     }
 }
 
-rootProject.name = 'backend'
+dependencyResolutionManagement {
+    // 优先使用 settings 中的仓库配置
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        // 常用镜像（任选其一或都保留）
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/spring' }
+
+        // 备选镜像（需要时可启用）
+        // maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+
+        // 兜底
+        mavenCentral()
+    }
+}
+
+// === 项目信息 ===
+rootProject.name = 'dada-codex-lab'
+
+// 如果后面要多模块，这里可以 include
+// include(":api", ":service")
