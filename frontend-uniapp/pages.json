@@ -1,0 +1,10 @@
+{
+  "pages": [
+    {
+      "path": "pages/user/index",
+      "style": {
+        "navigationBarTitleText": "Users"
+      }
+    }
+  ]
+}
