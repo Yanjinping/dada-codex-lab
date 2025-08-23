@@ -14,7 +14,10 @@ public class UserController {
 
     @GetMapping("/api/user/list")
     public UserPageResponse list(@RequestParam(defaultValue = "1") int page,
-                                 @RequestParam(defaultValue = "10") int size) {
-        return userService.listUsers(page, size);
+                                 @RequestParam(defaultValue = "10") int size,
+                                 @RequestParam(required = false) String kw,
+                                 @RequestParam(defaultValue = "createTime") String sortBy,
+                                 @RequestParam(defaultValue = "desc") String order) {
+        return userService.listUsers(page, size, kw, sortBy, order);
     }
 }
