@@ -1,0 +1,14 @@
+{
+  "name": "Frontend UniApp",
+  "appid": "__UNI__DEMO",
+  "description": "Minimal UniApp Vue3 app",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "uni-app": {
+    "compilerVersion": "3.0.0"
+  },
+  "launch_path": "pages/user/index",
+  "h5": {
+    "title": "Frontend UniApp"
+  }
+}
