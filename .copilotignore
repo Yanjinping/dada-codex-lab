@@ -1,0 +1,11 @@
+node_modules/
+dist/
+unpackage/
+.gradle/
+build/
+.idea/
+*.iml
+*.png
+*.jpg
+*.webp
+*.psd
